@@ -3,210 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Styled</title>
-    <!-- Link to Roboto Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Internal CSS Stylesheet -->
+    <title>About Me</title>
     <style>
-        /* Apply Google Font */
+        /* General styling for the page */
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: Arial, sans-serif;
+            margin: 20px;
         }
 
-        /* Style for H1 */
-        h1 {
-            color: #461220; /* Different color for H1 */
-            font-size: 2.5em;
-            margin-bottom: 30px; /* Margin below H1 */
+        /* Style the image to float right with appropriate margin */
+        img {
+            float: right;
+            margin: 10px 0 10px 15px;
+            width: 250px;
         }
 
-        /* Style for H2 */
-        h2 {
-            color: #8c2f39; /* Different color for H2 */
-            font-size: 2em;
-            margin-bottom: 30px; /* Margin below H2 */
-        }
-
-        /* Style and center the list */
-        .list-container {
-            text-align: center;
-        }
-
-        ul {
-            list-style-type: square;
-            display: inline-block;
-            border: 2px solid #b23a48;
-            padding: 10px;
-        }
-
-        /* Favorite food container */
-        .food-container {
-            display: flex;
-            margin: 20px 0;
-        }
-
-        .food-image {
-            background-image: url('Zereshk-Polo.jpg');
-            background-size: cover;
-            width: 300px;
-            height: 200px;
-            margin-right: 20px;
-        }
-
-        .food-text {
-            max-width: 500px;
-        }
-
-        /* Table styling with alternating row colors */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        table th, table td {
-            border: 1px solid #b23a48;
-            padding: 10px;
-            text-align: left; /* Align text to the left */
-        }
-
-        table th {
-            background-color: #fed0bb; /* Light background color for header */
-        }
-
-        table tr:nth-child(even) {
-            background-color: #fcb9b2;
-        }
-
-        /* Form styling */
-        form table {
-            margin: 20px 0;
-        }
-
-        form label {
-            display: inline-block;
-            width: 100px;
-            text-align: right;
-        }
-
-        /* Social media icons */
-        .social-icons {
-            position: fixed;
-            top: 100px;
-            right: 35px;
-        }
-
-        .social-icon {
-            width: 30px;
-            margin: 5px 0;
+        /* Clear floats */
+        .clearfix {
+            clear: both;
         }
     </style>
 </head>
 <body>
-    <!-- Heading 1: Main Title -->
+    <!-- Name in Heading 1 -->
     <h1>Shirin Ezzatpourghadim</h1>
-
-    <!-- Heading 2: Subtitle / Introduction -->
-    <h2>A Little About Me</h2>
 
     <!-- A few sentences about a trip -->
     <p>This summer, I took my first trip to Disney World in Orlando. Stepping into the park, I felt like entering a world of magic and my childhood nostalgia. It made me feel like a kid again.</p>
 
-    <!-- Heading 2: Favorite Pets Section -->
-    <h2>My Favorite Pets</h2>
+    <!-- Bulleted list of 3 favorite pet names and their types -->
+    <ul>
+        <li>A dog named Tala</li>
+        <li>A cat named Dizi</li>
+        <li>A dog named Babri</li>
+    </ul>
 
-    <!-- List of favorite pet names -->
-    <div class="list-container">
-        <ul>
-            <li>A dog named Tala</li>
-            <li>A cat named Dizi</li>
-            <li>A dog named Babri</li>
-        </ul>
-    </div>
+    <!-- Link to favorite restaurant -->
+    <p>
+        My favorite restaurant is <a href="https://www.ravaghrestaurants.com/" target="_blank">Ravagh</a> because they serve the best Persian foods in the US! I always visit here when I go to NYC.
+    </p>
 
-    <!-- Heading 2: Favorite Food Section -->
-    <h2>My Favorite Food</h2>
+    <!-- Image of favorite food with wrapped text -->
+    <p>
+        <img src="Zereshk-Polo.jpg" alt="Favorite Food">
+        My favorite food is Zereshk Polo. In English, it can be translated as Barberry Rice with chicken. I like it to be served with Shirazi salad. 
+        This dish is my favorite Persian food and is often served during gatherings. The tangy taste of barberries mixed with the saffron rice 
+        creates an unforgettable flavor. The chicken is tender and perfectly seasoned with saffron to complement the dish. It reminds me of my childhood.
+    </p>
 
-    <!-- Favorite food image as a background in a div -->
-    <div class="food-container">
-        <div class="food-image"></div>
-        <div class="food-text">
-            My favorite food is Zereshk Polo. In English, it can be translated as Barberry Rice with chicken. I like it to be served with Shirazi salad.
-        </div>
-    </div>
+    <!-- Clear floats before the table -->
+    <div class="clearfix"></div>
 
-    <!-- Heading 2: Favorite Books Section -->
-    <h2>My Favorite Books</h2>
-
-    <!-- Table of favorite books with alternating row colors -->
-    <table>
+    <!-- Table of favorite books -->
+    <table border="1">
         <tr>
             <th>Cover</th>
             <th>Author</th>
             <th>Summary</th>
         </tr>
         <tr>
+            <td>The Alchemist</td>
             <td><img src="The_Alchemist.jpg" alt="The Alchemist" width="100"></td>
             <td>Paulo Coelho</td>
             <td>A journey of self-discovery following a shepherd as he pursues his personal legend.</td>
         </tr>
         <tr>
+            <td>The Masnavi of Rumi</td>
             <td><img src="Rumi.jpg" alt="Rumi" width="100"></td>
             <td>Rumi</td>
             <td>The Masnavi of Rumi is a spiritual and philosophical epic poem that explores the deeper meanings of love, faith, and the soul.</td>
         </tr>
         <tr>
+            <td>Existential Psychotherapy by Irvin Yalom</td>
             <td><img src="Existential_Psychotherapy.jpg" alt="Existential Psychotherapy" width="100"></td>
             <td>Irvin Yalom</td>
-            <td>An exploration of existential psychology, focusing on human experiences of death, freedom, isolation, and meaning.</td>
+            <td>Existential Psychotherapy by Irvin Yalom is an exploration of existential psychology, focusing on human experiences of death, freedom, isolation, and meaning, and how these fundamental concerns influence mental health.</td>
         </tr>
         <tr>
+            <td>Blindness</td>
             <td><img src="Blindness.jpg" alt="Blindness" width="100"></td>
             <td>José Saramago</td>
-            <td>A novel exploring the collapse of society after a sudden epidemic of blindness strikes.</td>
+            <td>Blindness by José Saramago is a novel that explores the collapse of society after a sudden epidemic of blindness strikes, revealing the fragility of civilization and delving into themes of human nature, morality, and survival in the face of chaos.</td>
         </tr>
     </table>
-
-    <!-- Heading 2: User Input Form -->
-    <h2>Tell Me About Yourself</h2>
-
-    <!-- Form for user input -->
-    <form>
-        <table>
-            <tr>
-                <td><label for="firstname">First Name:</label></td>
-                <td><input type="text" id="firstname" name="firstname"></td>
-            </tr>
-            <tr>
-                <td><label for="lastname">Last Name:</label></td>
-                <td><input type="text" id="lastname" name="lastname"></td>
-            </tr>
-            <tr>
-                <td><label for="city">City:</label></td>
-                <td><input type="text" id="city" name="city"></td>
-            </tr>
-            <tr>
-                <td><label for="state">State:</label></td>
-                <td>
-                    <select id="state" name="state">
-                        <option value="CA">California</option>
-                        <option value="NY">New York</option>
-                        <option value="MA">Massachusetts</option>
-                    </select>
-                </td>
-            </tr>
-        </table>
-    </form>
-
-    <!-- Fixed position icons for Facebook and Twitter (X) -->
-    <div class="social-icons">
-        <a href="https://facebook.com" target="_blank">
-            <img src="facebook-icon.png" alt="Facebook" class="social-icon">
-        </a>
-        <a href="https://twitter.com" target="_blank">
-            <img src="twitter-icon.png" alt="Twitter" class="social-icon">
-        </a>
-    </div>
 </body>
 </html>
