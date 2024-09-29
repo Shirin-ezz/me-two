@@ -3,167 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>About Me - Styled</title>
+    <!-- Link to Roboto Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
+    <!-- Internal CSS Stylesheet -->
     <style>
-        /* Set font to Google Font Roboto */
+        /* Apply Google Font */
         body {
             font-family: 'Roboto', sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 20px;
         }
 
-        /* Style h1 and h2 elements */
-        h1, h2 {
-            color: #333; /* Set color */
-            margin-bottom: 30px; /* Leave margin of 30px below */
-        }
-
+        /* Style for H1 */
         h1 {
-            font-size: 2.5em; /* Font size for h1 */
-            color: #2a9d8f; /* Custom color for h1 */
+            color: #4A90E2; /* Different color for H1 */
+            font-size: 2.5em;
+            margin-bottom: 30px; /* Margin below H1 */
         }
 
+        /* Style for H2 */
         h2 {
-            font-size: 2em; /* Font size for h2 */
-            color: #e76f51; /* Custom color for h2 */
+            color: #50E3C2; /* Different color for H2 */
+            font-size: 2em;
+            margin-bottom: 30px; /* Margin below H2 */
         }
 
-        /* Style the image to float right with appropriate margin */
-        img {
-            width: 250px;
+        /* Style and center the list */
+        .list-container {
+            text-align: center;
         }
 
-        /* Clear floats */
-        .clearfix {
-            clear: both;
-        }
-
-        /* Style for unordered list */
         ul {
-            border: 2px solid #333; /* Add border around list */
-            width: 300px;
-            margin: 0 auto; /* Center the list */
+            list-style-type: square;
+            display: inline-block;
+            border: 2px solid #444;
             padding: 10px;
         }
 
-        ul li {
-            text-align: left; /* Align list items to the left */
-        }
-
-        /* Background image for the favorite food section */
-        .food-section {
-            display: flex;
-            margin: 20px 0;
+        /* Favorite food container with float */
+        .food-container {
+            overflow: auto;
         }
 
         .food-image {
-            width: 250px;
-            height: 250px;
-            background-image: url("Zereshk-Polo.jpg");
-            background-size: cover;
-            background-position: center;
-            margin-right: 20px;
+            float: right; /* Float image to the right */
+            margin: 10px;
+            width: 300px;
+            height: auto;
         }
 
-        .food-description {
-            flex-grow: 1;
-        }
-
-        /* Table styling with alternate row colors */
+        /* Table styling with alternating row colors */
         table {
-            border-collapse: collapse;
             width: 100%;
-            margin-bottom: 20px;
+            border-collapse: collapse;
+            margin: 20px 0;
         }
 
-        table, th, td {
-            border: 1px solid #ddd;
+        table th, table td {
+            border: 1px solid #888;
+            padding: 10px;
+            text-align: left; /* Align text to the left */
         }
 
-        th, td {
-            padding: 15px;
-            text-align: left;
+        table th {
+            background-color: #e0e0e0; /* Light background color for header */
         }
 
-        tr:nth-child(even) {
-            background-color: #f2f2f2; /* Add background color to alternate rows */
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
         }
 
-        /* Social media icons styling */
+        /* Form styling */
+        form table {
+            margin: 20px 0;
+        }
+
+        form label {
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+        }
+
+        /* Social media icons */
         .social-icons {
             position: fixed;
-            top: 100px; /* Distance from the top of the screen */
-            right: 35px; /* Distance from the right of the screen */
-            z-index: 1000; /* Ensure they are on top of other elements */
+            top: 100px;
+            right: 35px;
         }
 
-        .social-icons a {
-            display: block;
-            margin: 10px 0; /* Spacing between icons */
-        }
-
-        .social-icons img {
+        .social-icon {
             width: 30px;
-            height: 30px;
-        }
-
-        /* Style for form */
-        form {
-            margin: 30px 0;
-            width: 400px;
-        }
-
-        form table {
-            width: 100%;
-        }
-
-        label {
-            display: inline-block;
-            width: 120px; /* Set width to create columns */
-            text-align: right; /* Align labels to the right */
-            margin-right: 10px;
-        }
-
-        input, select {
-            width: 200px; /* Set width for form fields */
-        }
-
-        td {
-            vertical-align: top;
+            margin: 5px 0;
         }
     </style>
 </head>
 <body>
-    <!-- Name in Heading 1 -->
+    <!-- Heading 1: Main Title -->
     <h1>Shirin Ezzatpourghadim</h1>
+
+    <!-- Heading 2: Subtitle / Introduction -->
+    <h2>A Little About Me</h2>
 
     <!-- A few sentences about a trip -->
     <p>This summer, I took my first trip to Disney World in Orlando. Stepping into the park, I felt like entering a world of magic and my childhood nostalgia. It made me feel like a kid again.</p>
 
-    <!-- Bulleted list of 3 favorite pet names and their types -->
-    <ul>
-        <li>A dog named Tala</li>
-        <li>A cat named Dizi</li>
-        <li>A dog named Babri</li>
-    </ul>
+    <!-- Heading 2: Favorite Pets Section -->
+    <h2>My Favorite Pets</h2>
 
-    <!-- Link to favorite restaurant -->
-    <p>
-        My favorite restaurant is <a href="https://www.ravaghrestaurants.com/" target="_blank">Ravagh</a> because they serve the best Persian foods in the US! I always visit here when I go to NYC.
-    </p>
-
-    <!-- Favorite food section with background image -->
-    <div class="food-section">
-        <div class="food-image"></div>
-        <div class="food-description">
-            <h2>My Favorite Food</h2>
-            <p>My favorite food is Zereshk Polo. In English, it can be translated as Barberry Rice with chicken. I like it to be served with Shirazi salad. This dish is my favorite Persian food and is often served during gatherings. The tangy taste of barberries mixed with the saffron rice creates an unforgettable flavor. The chicken is tender and perfectly seasoned with saffron to complement the dish. It reminds me of my childhood.</p>
-        </div>
+    <!-- List of favorite pet names -->
+    <div class="list-container">
+        <ul>
+            <li>A dog named Tala</li>
+            <li>A cat named Dizi</li>
+            <li>A dog named Babri</li>
+        </ul>
     </div>
 
-    <!-- Table of favorite books -->
+    <!-- Heading 2: Favorite Food Section -->
+    <h2>My Favorite Food</h2>
+
+    <!-- Favorite food image with text wrapped around it -->
+    <div class="food-container">
+        <img src="Zereshk-Polo.jpg" alt="Favorite Food" class="food-image">
+        <p>
+            My favorite food is Zereshk Polo. In English, it can be translated as Barberry Rice with chicken. I like it to be served with Shirazi salad.
+            This dish is a staple in Persian cuisine, known for its unique combination of tangy barberries and savory chicken, all served on a bed of fluffy saffron rice.
+        </p>
+    </div>
+
+    <!-- Heading 2: Favorite Books Section -->
+    <h2>My Favorite Books</h2>
+
+    <!-- Table of favorite books with alternating row colors -->
     <table>
         <tr>
             <th>Cover</th>
@@ -171,41 +144,40 @@
             <th>Summary</th>
         </tr>
         <tr>
-            <td>The Alchemist</td>
             <td><img src="The_Alchemist.jpg" alt="The Alchemist" width="100"></td>
             <td>Paulo Coelho</td>
             <td>A journey of self-discovery following a shepherd as he pursues his personal legend.</td>
         </tr>
         <tr>
-            <td>The Masnavi of Rumi</td>
             <td><img src="Rumi.jpg" alt="Rumi" width="100"></td>
             <td>Rumi</td>
             <td>The Masnavi of Rumi is a spiritual and philosophical epic poem that explores the deeper meanings of love, faith, and the soul.</td>
         </tr>
         <tr>
-            <td>Existential Psychotherapy by Irvin Yalom</td>
             <td><img src="Existential_Psychotherapy.jpg" alt="Existential Psychotherapy" width="100"></td>
             <td>Irvin Yalom</td>
-            <td>Existential Psychotherapy by Irvin Yalom is an exploration of existential psychology, focusing on human experiences of death, freedom, isolation, and meaning, and how these fundamental concerns influence mental health.</td>
+            <td>An exploration of existential psychology, focusing on human experiences of death, freedom, isolation, and meaning.</td>
         </tr>
         <tr>
-            <td>Blindness</td>
             <td><img src="Blindness.jpg" alt="Blindness" width="100"></td>
             <td>José Saramago</td>
-            <td>Blindness by José Saramago is a novel that explores the collapse of society after a sudden epidemic of blindness strikes, revealing the fragility of civilization and delving into themes of human nature, morality, and survival in the face of chaos.</td>
+            <td>A novel exploring the collapse of society after a sudden epidemic of blindness strikes.</td>
         </tr>
     </table>
 
-    <!-- User information form -->
+    <!-- Heading 2: User Input Form -->
+    <h2>Tell Me About Yourself</h2>
+
+    <!-- Form for user input -->
     <form>
         <table>
             <tr>
-                <td><label for="first-name">First Name:</label></td>
-                <td><input type="text" id="first-name" name="first-name"></td>
+                <td><label for="firstname">First Name:</label></td>
+                <td><input type="text" id="firstname" name="firstname"></td>
             </tr>
             <tr>
-                <td><label for="last-name">Last Name:</label></td>
-                <td><input type="text" id="last-name" name="last-name"></td>
+                <td><label for="lastname">Last Name:</label></td>
+                <td><input type="text" id="lastname" name="lastname"></td>
             </tr>
             <tr>
                 <td><label for="city">City:</label></td>
@@ -215,24 +187,22 @@
                 <td><label for="state">State:</label></td>
                 <td>
                     <select id="state" name="state">
-                        <option value="">Select State</option>
-                        <option value="NY">New York</option>
                         <option value="CA">California</option>
+                        <option value="NY">New York</option>
                         <option value="MA">Massachusetts</option>
-                        <!-- Add more options as needed -->
                     </select>
                 </td>
             </tr>
         </table>
     </form>
 
-    <!-- Social media icons (Facebook and Twitter) with fixed position -->
+    <!-- Fixed position icons for Facebook and Twitter (X) -->
     <div class="social-icons">
         <a href="https://facebook.com" target="_blank">
-            <img src="facebook.png" alt="Facebook">
+            <img src="facebook-icon.png" alt="Facebook" class="social-icon">
         </a>
         <a href="https://twitter.com" target="_blank">
-            <img src="twitter.png" alt="Twitter">
+            <img src="twitter-icon.png" alt="Twitter" class="social-icon">
         </a>
     </div>
 </body>
