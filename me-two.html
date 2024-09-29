@@ -92,12 +92,21 @@
             top: 100px; /* Distance from the top of the screen */
             right: 35px; /* Distance from the right of the screen */
             z-index: 1000; /* Ensure it stays on top */
+            display: flex; /* Display icons in a column */
+            flex-direction: column; /* Arrange in a vertical column */
         }
 
         .social-icon {
             width: 30px;
+            height: 30px;
             margin: 10px 0; /* Spacing between icons */
             cursor: pointer; /* Change cursor to pointer on hover */
+            transition: transform 0.2s ease; /* Smooth scaling transition */
+        }
+
+        /* Hover effect on icons */
+        .social-icon:hover {
+            transform: scale(1.2); /* Scale up the icon on hover */
         }
     </style>
 </head>
