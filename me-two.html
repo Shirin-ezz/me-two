@@ -4,23 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
-        /* General styling for the page */
+        /* Set font to Google Font Roboto */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 20px;
+        }
+
+        /* Style h1 and h2 elements */
+        h1, h2 {
+            color: #333; /* Set color */
+            margin-bottom: 30px; /* Leave margin of 30px below */
+        }
+
+        h1 {
+            font-size: 2.5em; /* Font size for h1 */
+            color: #2a9d8f; /* Custom color for h1 */
+        }
+
+        h2 {
+            font-size: 2em; /* Font size for h2 */
+            color: #e76f51; /* Custom color for h2 */
         }
 
         /* Style the image to float right with appropriate margin */
         img {
-            float: right;
-            margin: 10px 0 10px 15px;
             width: 250px;
         }
 
         /* Clear floats */
         .clearfix {
             clear: both;
+        }
+
+        /* Style for unordered list */
+        ul {
+            border: 2px solid #333; /* Add border around list */
+            width: 300px;
+            margin: 0 auto; /* Center the list */
+            padding: 10px;
+        }
+
+        ul li {
+            text-align: left; /* Align list items to the left */
+        }
+
+        /* Background image for the favorite food section */
+        .food-section {
+            display: flex;
+            margin: 20px 0;
+        }
+
+        .food-image {
+            width: 250px;
+            height: 250px;
+            background-image: url("Zereshk-Polo.jpg");
+            background-size: cover;
+            background-position: center;
+            margin-right: 20px;
+        }
+
+        .food-description {
+            flex-grow: 1;
+        }
+
+        /* Table styling with alternate row colors */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* Add background color to alternate rows */
         }
 
         /* Social media icons styling */
@@ -39,6 +107,31 @@
         .social-icons img {
             width: 30px;
             height: 30px;
+        }
+
+        /* Style for form */
+        form {
+            margin: 30px 0;
+            width: 400px;
+        }
+
+        form table {
+            width: 100%;
+        }
+
+        label {
+            display: inline-block;
+            width: 120px; /* Set width to create columns */
+            text-align: right; /* Align labels to the right */
+            margin-right: 10px;
+        }
+
+        input, select {
+            width: 200px; /* Set width for form fields */
+        }
+
+        td {
+            vertical-align: top;
         }
     </style>
 </head>
@@ -61,19 +154,17 @@
         My favorite restaurant is <a href="https://www.ravaghrestaurants.com/" target="_blank">Ravagh</a> because they serve the best Persian foods in the US! I always visit here when I go to NYC.
     </p>
 
-    <!-- Image of favorite food with wrapped text -->
-    <p>
-        <img src="Zereshk-Polo.jpg" alt="Favorite Food">
-        My favorite food is Zereshk Polo. In English, it can be translated as Barberry Rice with chicken. I like it to be served with Shirazi salad. 
-        This dish is my favorite Persian food and is often served during gatherings. The tangy taste of barberries mixed with the saffron rice 
-        creates an unforgettable flavor. The chicken is tender and perfectly seasoned with saffron to complement the dish. It reminds me of my childhood.
-    </p>
-
-    <!-- Clear floats before the table -->
-    <div class="clearfix"></div>
+    <!-- Favorite food section with background image -->
+    <div class="food-section">
+        <div class="food-image"></div>
+        <div class="food-description">
+            <h2>My Favorite Food</h2>
+            <p>My favorite food is Zereshk Polo. In English, it can be translated as Barberry Rice with chicken. I like it to be served with Shirazi salad. This dish is my favorite Persian food and is often served during gatherings. The tangy taste of barberries mixed with the saffron rice creates an unforgettable flavor. The chicken is tender and perfectly seasoned with saffron to complement the dish. It reminds me of my childhood.</p>
+        </div>
+    </div>
 
     <!-- Table of favorite books -->
-    <table border="1">
+    <table>
         <tr>
             <th>Cover</th>
             <th>Author</th>
@@ -104,6 +195,36 @@
             <td>Blindness by José Saramago is a novel that explores the collapse of society after a sudden epidemic of blindness strikes, revealing the fragility of civilization and delving into themes of human nature, morality, and survival in the face of chaos.</td>
         </tr>
     </table>
+
+    <!-- User information form -->
+    <form>
+        <table>
+            <tr>
+                <td><label for="first-name">First Name:</label></td>
+                <td><input type="text" id="first-name" name="first-name"></td>
+            </tr>
+            <tr>
+                <td><label for="last-name">Last Name:</label></td>
+                <td><input type="text" id="last-name" name="last-name"></td>
+            </tr>
+            <tr>
+                <td><label for="city">City:</label></td>
+                <td><input type="text" id="city" name="city"></td>
+            </tr>
+            <tr>
+                <td><label for="state">State:</label></td>
+                <td>
+                    <select id="state" name="state">
+                        <option value="">Select State</option>
+                        <option value="NY">New York</option>
+                        <option value="CA">California</option>
+                        <option value="MA">Massachusetts</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </form>
 
     <!-- Social media icons (Facebook and Twitter) with fixed position -->
     <div class="social-icons">
